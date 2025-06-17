@@ -262,20 +262,24 @@ transform: scale(1.10);
         align-items: center;
         justify-content: space-between;
         margin-top: 25px;
-        
+
     }
 
     .edu{
         margin-left: 90px;
+        text-decoration: none;
     }
 
     .res{
         margin-right: 10px;
+        text-decoration: none;
     }
 
     .pro{
         margin-right:100px ;
+        text-decoration: none;
     }
+    
 
 
 
@@ -323,7 +327,16 @@ transform: scale(1.10);
     }
 }
 
+.custom-light-btn {
+  background-color: #5b85f0 !important;  /* Slightly lighter than #4a76ee */
+  color: white !important;
+  border: none !important;
+}
 
+.custom-light-btn:hover {
+  background-color: #4a76ee!important; /* Original color on hover */
+  
+}
 
 
 
