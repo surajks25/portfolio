@@ -3,6 +3,9 @@
     --link-color:#4a76ee;
     --background-color:#eeeff1;
 }
+/* * {
+    background-color: black !important;
+} */
 
 *{
     margin: 0;
@@ -68,9 +71,9 @@ nav .right a span{
     justify-content: space-between;
     align-items: center;
     padding:0 100px;
-    margin: 50px 0;
-    margin-top: 110PX;
-    margin-bottom: 60px;
+   /* margin: 10px 0;
+    margin-top: 5PX;
+    margin-bottom: 60px; */
     gap: 40px;
 }
 
@@ -104,12 +107,14 @@ border:2px solid var(--text-color);
 }
 
 .hero-section .headshot{
-    flex: 2;
+    /* flex: 2;
     display: flex;
-    justify-content: right;
-}
+    justify-content: right; */
+    /* top: 0;
+    right: -20%; 
 
-.hero-section .headshot img{
+
+/* .hero-section .headshot img{
     border-radius: 50%;
     width: 250px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -131,6 +136,23 @@ transform: scale(1.10);
     }
 }
 
+.spline-watermark-block {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 140px; /* Enough to cover watermark */
+  height: 40px;
+  background-color: white;
+  z-index: 10;
+  border-radius: 10px;
+  margin-right: 205px;
+}
+
+
+.headshot{
+height: 90vh;
+width: 40vh;
+}
 
 @media(max-width:740px) {
     /*section 1: hero*/
@@ -147,7 +169,7 @@ transform: scale(1.10);
 
     .skills-section{
         padding:0 100px;
-        margin-top: 115px;
+        margin-top: 100px;
       
     }
 
@@ -201,87 +223,6 @@ transform: scale(1.10);
 
 
 
-    /*Activity-zone*/
-
-    .Activity-zone{
-        margin-top: 44px;
-        text-align: center;
-        font-size: 18px;
-    }
-    
-
-    /* box middle*/
-
-    .program {
-        padding:0 150px;
-        margin-top: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-       
-    }
-
-    .photo{
-        transform: scale(1.05);
-        transition: 0.5s ease-in-out;
-        border-radius: 20%;
-        height: 250px;
-        width: 250px;
-         
-    }
-
-    .photo:hover{
-        transform: scale(1.10);
-        transition: 0.5s;
-    }
-    .program1 {
-        padding:0 150px;
-        margin-top: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-
-
-    .education{
-        background-size:contain;
-        display: flex;
-        height: 250px;
-        width: 250px;
-        border-radius: 20%;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-
-    }
-
-    /*box text*/
-
-    .box-below-text{
-        padding: 0 150px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 25px;
-
-    }
-
-    .edu{
-        margin-left: 90px;
-        text-decoration: none;
-    }
-
-    .res{
-        margin-right: 10px;
-        text-decoration: none;
-    }
-
-    .pro{
-        margin-right:100px ;
-        text-decoration: none;
-    }
-    
-
-
 
 
 /* mimimize the window size*/
@@ -328,15 +269,63 @@ transform: scale(1.10);
 }
 
 .custom-light-btn {
-  background-color: #5b85f0 !important;  /* Slightly lighter than #4a76ee */
+  background-color: #82c8e5 !important;  /* Slightly lighter than #4a76ee */
   color: white !important;
   border: none !important;
 }
 
 .custom-light-btn:hover {
-  background-color: #4a76ee!important; /* Original color on hover */
+  color: black !important;/* Original color on hover */
   
 }
 
 
+ .Activity-zone{
+        margin-top: 44px;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+.img-box {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  background-color: transparent;
+  transition: transform 0.3s ease; /* zoom effect on the box */
+}
 
+.img-box:hover {
+  transform: scale(1.05); /* zoom entire box on hover */
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' based on image */
+  border-radius: 20%;
+  display: block;
+  transition: none; /* disable zoom on image */
+}
+
+
+
+  .label-links {
+    text-align: center;
+    margin-top: 20px !important;
+  }
+
+  .label-links a {
+    margin: 0 40px;
+    text-decoration: none;
+    font-weight: 450;
+    color: black;
+  }
+
+  #rowdis{
+    margin-top: 3px !important;
+  }
+
+/* 3d model*/
