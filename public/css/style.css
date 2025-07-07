@@ -74,6 +74,7 @@ nav .right a span{
    /* margin: 10px 0;
     margin-top: 5PX;
     margin-bottom: 60px; */
+    
     gap: 40px;
 }
 
@@ -136,6 +137,12 @@ transform: scale(1.10);
     }
 }
 
+.headshot spline-viewer {
+  width: 450px;      /* adjust width */
+  height: 560px;     /* adjust height */
+  margin-right: 3px;
+}
+
 .spline-watermark-block {
   position: absolute;
   bottom: 10px;
@@ -146,13 +153,9 @@ transform: scale(1.10);
   z-index: 10;
   border-radius: 10px;
   margin-right: 205px;
+  margin-bottom: 88px;
 }
 
-
-.headshot{
-height: 90vh;
-width: 40vh;
-}
 
 @media(max-width:740px) {
     /*section 1: hero*/
@@ -169,7 +172,7 @@ width: 40vh;
 
     .skills-section{
         padding:0 100px;
-        margin-top: 100px;
+        margin-top: 1px;
       
     }
 
