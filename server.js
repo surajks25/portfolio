@@ -23,6 +23,11 @@ app.get("/project", (req,res)=>{
     res.render("listings/project.ejs");
 });
 
-app.listen("8080", ()=>{
-console.log("listening the PORT 8080");
+// app.listen("8080", ()=>{
+// console.log("listening the PORT 8080");
+// });
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });
