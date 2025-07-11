@@ -1,11 +1,8 @@
 :root{
-    --text-color:#1a1c20;
+    --text-color:#000000af;
     --link-color:#4a76ee;
     --background-color:#eeeff1;
 }
-/* * {
-    background-color: black !important;
-} */
 
 *{
     margin: 0;
@@ -19,11 +16,10 @@ html{
 
 body{
     background-color: var(--background-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
+  cursor:context-menu;
 
 }
-
-
 
 a{
     color: var(--link-color);
@@ -32,33 +28,46 @@ a{
 
 /*navbar*/
 
-nav{
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
     display: flex;
     justify-content: space-between;
-    padding:0 190px;
+    padding: 0 190px;
     height: 80px;
     align-items: center;
-    background-color: #82c8e5;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+    background-color: rgba(255, 255, 255, 0.552); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
 }
 
+
 nav .left a{
-    color:var(--text-color);
-    font-size: 22px;
-    font-weight: 600;
-    text-decoration: none;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 26px;
+  font-weight: 700;
+  color: #333 !important;
+  text-decoration: none; 
+  margin-left: 6px;
 }
 
 nav .right a{
     color:var(--text-color);
     margin: 0 10px;
     text-decoration: none;
+    font-weight: 500;
+    font-size: 15px !important; 
+    color: #333333c4;            
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 nav .right a:hover{
-    color: #696969;
+    color: #000000; 
 }
 
 nav .right a span{
@@ -71,11 +80,14 @@ nav .right a span{
     justify-content: space-between;
     align-items: center;
     padding:0 100px;
-   /* margin: 10px 0;
-    margin-top: 5PX;
-    margin-bottom: 60px; */
-    
+    height: 420px;
     gap: 40px;
+
+  background-image: url('/images/bgImage.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff; 
 }
 
 .hero-section .text{
@@ -83,9 +95,10 @@ nav .right a span{
 }
 
 .hero-section .text h2{
-    font-size: 45px;
-    
+    font-size: 45px; 
 }
+
+
 
 .hero-section .text .links{
     margin-top: 25px;
@@ -107,36 +120,6 @@ color: var(--text-color);
 border:2px solid var(--text-color);
 }
 
-.hero-section .headshot{
-    /* flex: 2;
-    display: flex;
-    justify-content: right; */
-    /* top: 0;
-    right: -20%; 
-
-
-/* .hero-section .headshot img{
-    border-radius: 50%;
-    width: 250px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-.hero-section .headshot img{
-    transform: scale(1.05);
-    transition: 0.5s ease-in-out;
-}
-
-.hero-section .headshot img:hover{
-transform: scale(1.10);
-    transition: 0.5s;
-}
-
-@media(max-width:850px) {
-    /*section 1: hero*/
-    .hero-section .text{
-        font-size: 35px;
-    }
-}
-
 .headshot spline-viewer {
   width: 450px;      /* adjust width */
   height: 560px;     /* adjust height */
@@ -149,11 +132,11 @@ transform: scale(1.10);
   right: 10px;
   width: 140px; /* Enough to cover watermark */
   height: 40px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   z-index: 10;
   border-radius: 10px;
   margin-right: 205px;
-  margin-bottom: 88px;
+  margin-bottom: 159px;
 }
 
 
@@ -172,7 +155,7 @@ transform: scale(1.10);
 
     .skills-section{
         padding:0 100px;
-        margin-top: 1px;
+        margin-top: 40px;
       
     }
 
@@ -222,11 +205,6 @@ transform: scale(1.10);
         border-radius: 2px;
         transition: 1s;
     }
-
-
-
-
-
 
 /* mimimize the window size*/
 
@@ -297,20 +275,20 @@ transform: scale(1.10);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   background-color: transparent;
-  transition: transform 0.3s ease; /* zoom effect on the box */
+  transition: transform 0.3s ease; 
 }
 
 .img-box:hover {
-  transform: scale(1.05); /* zoom entire box on hover */
+  transform: scale(1.05); 
 }
 
 .img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* or 'contain' based on image */
+  object-fit: cover; 
   border-radius: 20%;
   display: block;
-  transition: none; /* disable zoom on image */
+  transition: none; 
 }
 
 
@@ -323,12 +301,16 @@ transform: scale(1.10);
   .label-links a {
     margin: 0 40px;
     text-decoration: none;
-    font-weight: 450;
-    color: black;
+    font-weight: 500;
+    font-size: 15px !important; 
+    color: #333333c4; 
+    font-family: 'Poppins', sans-serif !important;
   }
 
   #rowdis{
     margin-top: 3px !important;
   }
 
-/* 3d model*/
+  .send:hover{
+    background-color: white !important;
+  }
