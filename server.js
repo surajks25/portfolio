@@ -7,7 +7,7 @@ app.engine('ejs', ejsMate); //ejs-mate
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views")); //set file
 app.use(express.static(path.join(__dirname, "/public"))); //for using statc file like css,js files
-
+    
 
 
 
@@ -23,9 +23,17 @@ app.get("/project", (req,res)=>{
     res.render("listings/project.ejs");
 });
 
-// app.listen("8080", ()=>{
-// console.log("listening the PORT 8080");
-// });
+app.get("/internship", (req,res)=>{
+    res.render("listings/internship.ejs");
+});
+
+app.get("/certificate", (req,res)=>{
+    res.render("listings/certificate.ejs");
+});
+
+app.get("/hobbies", (req,res)=>{
+    res.render("listings/hobbies.ejs");
+});
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

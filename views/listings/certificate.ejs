@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate") %>
+
+<!-- Certificate Section -->
+<section class="container my-5">
+  <h2 class="text-center mb-4 blur-text">Certifications</h2>
+  <div class="row gy-4">
+
+    <% const certs = [
+      { id: 1, title: 'Web Development Certificate', issuer: 'Corizo', date: 'Dec 2022', img: 'Corizo_Internship_Web Development_page-0001.jpg' },
+      { id: 2, title: 'Sql', issuer: 'Udemy', date: 'Aug 2024', img: 'SQL_page-0001.jpg' },
+      { id: 3, title: 'Cricket', issuer: 'MITE', date: 'Dec 2024', img: 'cricketCertificate.jpeg' },
+      { id: 4, title: 'Postman', issuer: 'NITK Surathkal', date: 'Nov 2024', img: 'Post_man_certificate NITK.jpg' },
+      { id: 5, title: 'Aurdino  Workshop', issuer: 'MITE', date: 'Jan 2024', img: 'Aurdino_workshop.jpg' },
+      { id: 6, title: 'Accenture Gold IAspire', issuer: 'Accenture', date: 'Jan 2025', img: 'Accenture-Go for Gold-IAspire certificate_page-0001.jpg' },
+      { id: 7, title: 'Promt Engineering', issuer: 'Cognitive Class', date: 'Jul 2024', img: 'Promt Engineering_page-0001.jpg' },
+      { id: 8, title: 'RPA Developer Foundation', issuer: 'Ui Path', date: 'Apr 2024', img: 'RPA Developer Foundation_page-0001.jpg' },
+      { id: 9, title: 'Linux Shell Basics', issuer: 'Cisco', date: 'Jul 2023', img: 'certificate9.jpg' },
+    ]; %>
+
+    <% certs.forEach(cert => { %>
+      <div class="col-md-4">
+        <div class="card shadow-sm" data-bs-toggle="modal" data-bs-target="#certModal<%= cert.id %>" style="cursor: pointer;">
+          <img src="/images/<%= cert.img %>" class="card-img-top" alt="Certificate <%= cert.id %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= cert.title %></h5>
+            <p class="card-text">Issued by <%= cert.issuer %><br><%= cert.date %></p>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</section>
+
+<!-- Modals -->
+<% certs.forEach(cert => { %>
+  <div class="modal fade" id="certModal<%= cert.id %>" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="/images/<%= cert.img %>" class="img-fluid" alt="Full View Certificate <%= cert.id %>">
+        </div>
+      </div>
+    </div>
+  </div>
+<% }); %>
